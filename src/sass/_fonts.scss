@@ -1,0 +1,8 @@
+@mixin customfontfamily($style:normal,$fw:normal,$color:black){
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: $fw;
+    font-style: $style;
+    color:$color;
+    
+}

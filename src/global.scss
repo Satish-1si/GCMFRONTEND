@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.GlobalContainer{
+    height: 100vh;
+    width: 100vw;
+    border: solid;
+}
+a{
+    text-decoration: none !important;
+}
+.container {
+    position: relative; /* Establishes a positioning context */
+   
+  }
+  .hf {
+    background: #096ed3;
+    color: black;
+    text-align: center;
+    padding: 1rem; /* Use rem or px instead of shorthand for consistency */
+    margin: 0; /* Remove default margin */
+  }
+.pagination{
+    display: flex;
+    justify-content: end;
+    padding-right: 25px;
+    margin-top: 0px;
+}

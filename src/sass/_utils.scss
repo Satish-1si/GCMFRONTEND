@@ -1,0 +1,6 @@
+@mixin customflexbox($direction:row,$content:center,$Item:center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $Item;
+}

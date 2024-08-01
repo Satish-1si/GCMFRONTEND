@@ -1,0 +1,132 @@
+
+@import "fonts";
+@import "utils";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.Dashboard {
+	display: grid;
+	grid-template-columns: 20% 1fr;
+	grid-template-rows: 100vh;
+	@include customfontfamily(normal, bold, rgb(0, 0, 0));
+	@include customflexbox(row,start,start)
+
+
+	
+}
+.ps-menu-button:hover {
+	background-color:transparent !important;
+  }
+.customize{
+	background-color: #3b4d68;
+	margin: 0px;
+}
+
+// .section{
+// 	@include customfontfamily(normal, bold, rgb(0, 0, 0));
+// 	@include customflexbox(column,start,start)	
+// }
+.hf{
+	background-color: #096ed3;
+	color: aliceblue;
+	width: 100%;
+	margin: 0px;
+	@include customfontfamily(normal, bold, rgb(0, 0, 0));
+	text-align: center;
+
+}
+
+.svg-icon {
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+	
+}
+.Search{
+	display: flex;
+	align-items: center;
+	justify-content:space-between;
+	input{
+		margin-right: 20px;
+		width:40vw;
+		padding: 2px;
+	}
+	button{
+		width: 120px;
+		padding: 4px;
+		font-size: medium;
+		border-radius: 20px !important;
+
+	}
+	select{
+		border-radius: 5px;
+		padding: 10px !important;
+	}
+	img{
+		margin-left: 5px !important;
+	}
+}
+.custom-dropdown-width {
+	width: 60px !important; 
+	margin-top: 5px !important;
+	background: rgb(247, 247, 247) !important;
+	div{
+		width: 120px !important;
+		text-align: center;
+		border: none;
+	}
+	img{
+		margin-right: 7px;
+		margin-top: 2px;
+		padding: 0px !important;
+	}
+  }
+
+a{
+	border:none;
+	text-decoration: none;
+}
+td{
+	text-align: center !important;
+	color:#3b4d68 !important;
+	font-weight: 600  !important;
+	background-color:#fffdfb !important;
+
+}
+th{
+	text-align: center !important;
+	background-color:#fffdfb !important;
+
+}
+.subsection{
+    font-weight: lighter;
+}
+.subsection:hover{
+  text-decoration: underline;
+  color: lightblue !important;
+}
+.btnflex{
+	display: flex;
+	align-items: baseline;
+	button{
+		margin-left:10px;
+	}
+
+
+}
+.ViewUsers{
+	overflow-x: auto;
+	th{
+		width: 120px;
+	}
+}
+
+.MenuItem{
+ background-color: #9db7bd!important;
+ a{
+    color:black !important;
+ }
+}
