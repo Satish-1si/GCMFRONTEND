@@ -29,7 +29,7 @@ export const ThridColumn=[
         formatter: () => <input type="email" className="form-control" placeholder="Enter Email" required />
     },
 	{
-        dataField: 'mobile',
+        dataField: 'mobile' ,
         text: 'Mobile*',
         formatter: () => <input type="text" className="form-control" placeholder="Enter Mobile" required />
     },
