@@ -11,6 +11,9 @@ import imageBg from "../sass/images/bg_1.jpg"
 import navIcon from "../sass/icons/navIcon.svg";
 import { Sidebar, Menu, MenuItem, SubMenu, ProSidebarProvider } from 'react-pro-sidebar';
 import { Outlet,Link } from 'react-router-dom';
+import DB from "../sass/icons/DB.svg"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const SideNav = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const[loading,setLoading]=useState(true)
@@ -40,42 +43,55 @@ const SideNav = () => {
             <Menu>
                    <SubMenu title="User Management"  label="User Management" icon={<img src={user} alt="User Icon" />}>
                         <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" /> 
-                         <Link to="/GcmDialler/UserManagement/AddUsers"> Add New Users</Link> 
+                         <Link to="/Admin/GcmDialler/UserManagement/AddUsers"> Add New Users</Link> 
                         </MenuItem>
                         <MenuItem className=' MenuItem'><img src={Dot} alt="Dot Icon" /> 
-                        <Link to="/GcmDialler/UserManagement/ViewUsers"> View Users</Link> 
+                        <Link to="/Admin/GcmDialler/UserManagement/ViewUsers"> View Users</Link> 
                         </MenuItem>
                    </SubMenu>
 
                    <SubMenu title="Device Details" label="Device Details" icon={<img src={device} alt="Device Icon" />}>
                          <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
-                             <Link to="/GcmDialler/DeviceDetails/ViewAllUsers"> View All Details</Link> 
+                             <Link to="/Admin/GcmDialler/DeviceDetails/ViewAllUsers"> View All Details</Link> 
                          </MenuItem>
                          <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
-                              <Link to="/GcmDialler/DeviceDetails/AndroidUser">  View Android Users</Link>  
+                              <Link to="/Admin/GcmDialler/DeviceDetails/AndroidUser">  View Android Users</Link>  
                          </MenuItem>
                          <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
-                              <Link to="/GcmDialler/DeviceDetails/IphoneUser">  View iPhone Users </Link>
+                              <Link to="/Admin/GcmDialler/DeviceDetails/IphoneUser">  View iPhone Users </Link>
                           </MenuItem>
                    </SubMenu>
 
                    <SubMenu title="Tenant Management" label="Tenant Management" icon={<img src={password} alt="Password Icon" />}>
                      <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
-                          <Link to="/GcmDialler/TenantManagement/AddTenant">  Add Tenant </Link>
+                          <Link to="/Admin/GcmDialler/TenantManagement/AddTenant">  Add Tenant </Link>
                      </MenuItem>
                      <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
-                         <Link to="/GcmDialler/TenantManagement/ViewTenant">  View Tenant</Link> 
+                         <Link to="/Admin/GcmDialler/TenantManagement/ViewTenant">  View Tenant</Link> 
                      </MenuItem>
                    </SubMenu>
 
                    <SubMenu title="Settings" label="Settings" icon={<img src={settings} alt="Settings Icon" />}>
                      <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
-                         <Link to="/GcmDialler/Settings/ConfigurationSession">  Configure Session Time</Link>
+                         <Link to="/Admin/GcmDialler/Settings/ConfigurationSession">  Configure Session Time</Link>
                      </MenuItem>
                      <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
-                        <Link to="/GcmDialler/settings/ChangePassword">  Change Password </Link>
+                        <Link to="/Admin/GcmDialler/settings/ChangePassword">  Change Password </Link>
                     </MenuItem>
                    </SubMenu>
+
+                   <SubMenu title="Mode Details" label="MODE SCREENS" icon={<img src={DB} alt="Device Icon" />}>
+                         <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
+                             <Link to="/Admin/GcmDialler/Modes/ModeOne"> MODE ONE</Link> 
+                         </MenuItem>
+                         <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
+                              <Link to="/Admin/GcmDialler/Modes/ModeTwo"> MODE TWO</Link>  
+                         </MenuItem>
+                         <MenuItem className='MenuItem'><img src={Dot} alt="Dot Icon" />
+                              <Link to="/Admin/GcmDialler/Modes/ModeThree"> MODE THREE</Link>
+                          </MenuItem>
+                   </SubMenu>
+
               </Menu>
           </Sidebar>
 
@@ -83,11 +99,23 @@ const SideNav = () => {
         
       </div>
       <div className='section' style={{width:"100vw",height:"100vh",background:"white"}}>
+        <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+        />
          <h2 className='hf text-white p-3' style={{height:"10%"}}>Super Admin panel</h2>
          <div className='m-2' style={{height:"89.9%",	background:"#f7f7f7"}}>
              <Outlet/>
          </div>
-         <Link to="/GcmDialler"> 
+         <Link to="/Admin/GcmDialler"> 
            <p class="hf subsection m-0 text-light" >
             Copyright © 2017 GCM Dialer. All rights reserved.
            </p>

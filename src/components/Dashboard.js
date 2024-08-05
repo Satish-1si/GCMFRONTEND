@@ -3,6 +3,7 @@ import SideNav from './sidenav'
 const Dashboard = () => {
   return (
     <div className='border border-success'>
+       
        <SideNav/>
     </div>
   )

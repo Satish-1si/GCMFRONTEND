@@ -4,12 +4,12 @@ export const Columns = [
       text: <h6 className="table-header">S.No.</h6>,
     },
     {
-      dataField: 'tenant',
-      text: <h6 className="table-header">Tenant</h6>,
+      dataField: 'TenentRole',
+      text: <h6 >Tenant</h6>,
     },
     {
-      dataField: 'didNo',
-      text: <h6 className="table-header">DID No.</h6>,
+      dataField: 'DidNo',
+      text: <h6 >DID No.</h6>,
     },
     {
       dataField: 'edit',

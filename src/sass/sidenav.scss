@@ -90,15 +90,22 @@ a{
 	text-decoration: none;
 }
 td{
-	text-align: center !important;
+
+
 	color:#3b4d68 !important;
 	font-weight: 600  !important;
 	background-color:#fffdfb !important;
+	.table-header{
+          text-align: center !important;
+	}
 
 }
 th{
-	text-align: center !important;
+	// text-align: center !important;
 	background-color:#fffdfb !important;
+	.table-header{
+		text-align: center !important;
+   }
 
 }
 .subsection{
